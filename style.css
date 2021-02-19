@@ -1,0 +1,146 @@
+body {
+  background-color: rgba(252, 248, 177, 1);
+}
+
+.illustration {
+  transform: translateY(-20px);
+}
+
+.header-text {
+  font-size: 10px;
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+.dino-text {
+  font-size: 6px;
+  text-anchor: start;
+  opacity: 0;
+  transform: translate(1px, 30px);
+  animation: pop 1s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.speech-bubble {
+  transform: translate(1px, -1px);
+  opacity: 0;
+  animation: pop 1s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.speech {
+  transform: translateY(1px);
+}
+
+.final-dino {
+  transform: translate(14px, -7px) scale(1.12, 1.12) scale(-1, 1);
+  transform-origin: center;
+  animation: dino-dash 1s ease-in-out;
+}
+
+@keyframes dino-dash {
+  0% {
+    transform: translate(80px, -7px) scale(1.12, 1.12) scale(-1, 1);
+  }
+
+  100% {
+    transform: translate(14px, -7px) scale(1.12, 1.12) scale(-1, 1);
+  }
+}
+
+.cactus {
+  /* transform: translate(-35px, 1px); */
+  transform: translate(-35px, 1px);
+  animation: shake 0.4s 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  /* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) translate(-35px, 1px);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0) translate(-35px, 1px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0) translate(-35px, 1px);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0) translate(-35px, 1px);
+  }
+}
+
+.cactus-2 {
+  transform: scale(0.5) translate(66px, 10px) scaleX(-1);
+  transform-origin: center;
+}
+
+.rocks {
+  transform: translate(-20px, 34px) scale(0.6);
+}
+
+.rocks-2 {
+  transform: translate(10px, 33px) scale(0.5);
+}
+
+.rocks-3 {
+  transform: translate(52px, 28px) scale(0.5);
+}
+
+.rocks-4 {
+  transform: scaleX(-1) translate(-37px);
+  transform-origin: center;
+}
+
+.rocks-5 {
+  transform: translate(-25px, 8px) scaleX(-1);
+  transform-origin: center;
+}
+
+.cloud-1 {
+  animation: drift-cloud 42s infinite;
+  transform: translateX(-20px);
+}
+
+.cloud-2 {
+  animation: drift-cloud 28s infinite;
+  animation-delay: -6s;
+  transform: translateX(-20px);
+}
+
+.cloud-3 {
+  animation: drift-cloud 21s infinite;
+  transform: translate(-20px, 0);
+}
+
+@keyframes drift-cloud {
+  0% {
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#dino-clip-path {
+  outline: 1px solid black;
+}
